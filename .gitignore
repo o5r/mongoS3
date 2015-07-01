@@ -1,0 +1,7 @@
+# IDEs
+# SublimeText
+*.sublime-*
+
+# Node.js / npm
+*.log
+node_modules
