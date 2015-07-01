@@ -35,15 +35,7 @@ module.exports = function mongoStream(uriInfo, collectionName, callback) {
   var args = createDumpArgs(uriInfo, collectionName);
 
   var dumpChild = spawn('mongodump', args);
-  dumpChild.on('error', function() {
-    console.log('mongoStream.on(error): (collection:'+collectionName+')', arguments);
-  });
-  dumpChild.stderr.on('error', function() {
-    console.log('mongoStream.stderr.on(error): (collection:'+collectionName+')', arguments);
-  });
-  dumpChild.stdout.on('error', function() {
-    console.log('mongoStream.stdout.on(error): (collection:'+collectionName+')', arguments);
-  });
+  dumpChild.on('error', callback);
   dumpChild.stdout.pause();
   return callback(null, dumpChild.stdout);
 };

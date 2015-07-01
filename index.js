@@ -20,7 +20,6 @@ module.exports = function mongoDump(mongoUri, s3, path, callback) {
       });
       uploadStream.on('error', callback);
       uploadStream.on('uploaded', function(entry) {
-        console.log('uploadStream.on(uploaded)');
         return callback(null, entry.Key);
       });
 
@@ -30,12 +29,10 @@ module.exports = function mongoDump(mongoUri, s3, path, callback) {
       archiveStream.pipe(uploadStream);
 
       _.each(collectionStreams, function(collectionStream) {
-        collectionStream.stream.on('error', function() {
-          console.error('collectionStream_' + collectionStream.name + '.on(close):', arguments);
-        });
-        collectionStream.stream.on('close', function() {
-          console.log('collectionStream_' + collectionStream.name + '.on(close): ' + archiveStream.pointer() + ' total bytes');
-        });
+        collectionStream.stream.on('error', console.error);
+        // collectionStream.stream.on('close', function() {
+        //   console.log('collectionStream_' + collectionStream.name + '.on(close): ' + archiveStream.pointer() + ' total bytes');
+        // });
 
         archiveStream.append(collectionStream.stream, { name: collectionStream.name + '.bson' });
       });
