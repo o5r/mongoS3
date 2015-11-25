@@ -1,20 +1,26 @@
 {
   "name": "mongodump",
-  "version": "1.0.0",
-  "author": "Mathieu Ghennassia <mathieu.ghennassia@gmail.com>",
+  "version": "2.0.0",
+  "author": "Lendix Team",
   "description": "Dump Mongo collections, zip, upload to S3",
   "main": "index.js",
+  "scripts": {
+    "test": "mocha -b"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mathieug/mongodump.git"
+    "url": "git+https://github.com/lendix/mongodump.git"
   },
   "dependencies": {
-    "archiver": "0.14.4",
-    "async": "1.3.0",
-    "aws-sdk": "2.1.36",
-    "lodash": "3.10.0",
-    "mongodb": "2.0.35",
+    "archiver": "0.16.0",
+    "aws-sdk": "2.2.19",
+    "bluebird": "3.0.5",
+    "mongo-uri": "0.1.2",
+    "mongodb": "2.0.49",
     "s3-upload-stream": "1.0.7"
+  },
+  "devDependencies": {
+    "mocha": "2.3.4"
   },
   "private": true
 }
