@@ -1,7 +1,7 @@
 var mongodump = require('../index');
 
 describe('mongudump test suite', function () {
-    this.timeout(10000);
+    this.timeout(100000);
     it('work', function (done) {
         return mongodump({
             uri: process.env.MONGO_URI,
