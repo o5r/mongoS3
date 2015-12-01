@@ -20,7 +20,8 @@
   },
   "env": {
     "node": true,
-    "mongo": true
+    "mongo": true,
+    "mocha": true
   },
   "globals": {
     "print": true
