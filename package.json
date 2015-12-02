@@ -1,26 +1,43 @@
 {
-  "name": "mongodump",
-  "version": "2.0.0",
-  "author": "Lendix Team",
-  "description": "Dump Mongo collections, zip, upload to S3",
+  "name": "mongo-s3",
+  "version": "1.0.0",
+  "description": "Dump mongo collections, zip, upload to S3",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "aws-sdk": "2.2.20",
+    "archiver": "0.20.0",
+    "bluebird": "3.0.6",
+    "mongo-uri": "0.1.2",
+    "mongodb": "2.0.49",
+    "s3-upload-stream": "1.0.7"
+  },
+  "devDependencies": {
+    "mocha": "2.3.4",
+    "eslint": "1.10.3"
+  },
   "scripts": {
     "test": "mocha -b"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lendix/mongodump.git"
+    "url": "git+ssh://git@github.com/Lendix/mongoS3.git"
   },
-  "dependencies": {
-    "archiver": "0.20.0",
-    "aws-sdk": "2.2.19",
-    "bluebird": "3.0.5",
-    "mongo-uri": "0.1.2",
-    "mongodb": "2.0.49"
+  "keywords": [
+    "mongodb",
+    "mongo",
+    "dump",
+    "s3",
+    "backup",
+    "zip",
+    "heroku"
+  ],
+  "author": "Lendix",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lendix/mongoS3/issues"
   },
-  "devDependencies": {
-    "eslint": "1.10.2",
-    "mocha": "2.3.4"
-  },
-  "private": true
+  "homepage": "https://github.com/Lendix/mongoS3#readme"
 }
