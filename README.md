@@ -4,7 +4,7 @@ Simply dump a Mongo DB, then stream everything to AWS S3, promise flavoured
 ## Usage
 
 ```es6
-const mongoS3 = require('mongos3');
+const mongoS3 = require('mongo-s3');
 
 mongoS3({
   log: console.log,
