@@ -6,7 +6,7 @@ Simply dump a Mongo DB, then stream everything to AWS S3, promise flavoured
 ```es6
 const mongoS3 = require('mongos3');
 
-mongodump({
+mongoS3({
   uri: process.env.MONGO_URI,
   s3: {
       accessKeyId: process.env.AWS_ACCESS_KEY_ID,
