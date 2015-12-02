@@ -1,10 +1,10 @@
-# mongodump
-Simply dump a mongodb, then stream everything to AWS S3, promise flavoured
+# mongoS3
+Simply dump a Mongo DB, then stream everything to AWS S3, promise flavoured
 
 ## Usage
 
 ```es6
-const mongodump = require('mongodump');
+const mongoS3 = require('mongos3');
 
 mongodump({
   uri: process.env.MONGO_URI,
