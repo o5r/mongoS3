@@ -7,6 +7,7 @@ Simply dump a Mongo DB, then stream everything to AWS S3, promise flavoured
 const mongoS3 = require('mongos3');
 
 mongoS3({
+  log: console.log,
   uri: process.env.MONGO_URI,
   s3: {
       accessKeyId: process.env.AWS_ACCESS_KEY_ID,
@@ -15,5 +16,5 @@ mongoS3({
       key: process.env.AWS_S3_DUMP_KEY
   }
 }).then(function (result) { console.log('EVERYTHING SHOULD BE OK') })
-  .catch(function (err) { console.error('Snap something went wrong :(') });
+  .catch(function (err) { console.error('Snap, something went wrong :(') });
 ```
