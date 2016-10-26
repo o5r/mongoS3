@@ -7,16 +7,16 @@
     "test": "test"
   },
   "dependencies": {
-    "aws-sdk": "2.2.20",
-    "archiver": "0.20.0",
-    "bluebird": "3.0.6",
+    "aws-sdk": "2.6.12",
+    "archiver": "1.1.0",
+    "bluebird": "3.4.6",
     "mongo-uri": "0.1.2",
-    "mongodb": "2.0.49",
+    "mongodb": "2.2.11",
     "s3-upload-stream": "1.0.7"
   },
   "devDependencies": {
-    "mocha": "2.3.4",
-    "eslint": "1.10.3"
+    "mocha": "3.1.2",
+    "eslint": "3.8.1"
   },
   "scripts": {
     "test": "mocha -b"
