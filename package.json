@@ -11,7 +11,7 @@
     "aws-sdk": "2.94.0",
     "bluebird": "3.5.0",
     "mongo-uri": "0.1.2",
-    "mongodb": "2.2.30",
+    "mongodb": "3.1.13",
     "s3-upload-stream": "1.0.7"
   },
   "devDependencies": {
