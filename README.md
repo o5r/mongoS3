@@ -1,4 +1,7 @@
 # mongoS3
+
+⚠️ This package is no longer maintained, you should use an alternative solution for your backups ⚠️
+
 Simply dump a Mongo DB, then stream everything to AWS S3, promise flavoured
 
 ## Usage
